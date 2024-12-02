@@ -10,10 +10,11 @@
         <div class="card-body">
             <form action="{{ route('usuarios.store') }}" method="POST">
                 @csrf
+                @method('PUT')
 
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <input type="text" class="form-control" id="nombre" value="{{$usuario->nombre}}" required>
                 </div>
 
                 <div class="mb-3">
