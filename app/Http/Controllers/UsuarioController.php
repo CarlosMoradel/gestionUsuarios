@@ -30,7 +30,7 @@ class UsuarioController extends Controller
             'correo' => 'required|email|unique:usuarios',
             'telefono' => 'required|max:15',
             'direccion' => 'required|max:255',
-            'contraseña' => 'required|min:6',
+            'contraseña' => 'required|min:8',
             'departamento_id' => 'required|exists:departamentos,id',
         ]);
 
